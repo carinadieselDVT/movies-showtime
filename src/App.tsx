@@ -3,14 +3,16 @@ import bgImage from "./assets/background.jpg";
 import MovieList from "./components/MovieList";
 
 function App() {
+  // TODO: Convert units of measurement from MUI variants to pixels/rems
   return (
     <Box
       sx={{
+        // MUI's styling prop
         minHeight: "100vh",
         display: "grid",
-        placeItems: "center",
-        backgroundImage: `url(${bgImage})`,
-        backgroundSize: "cover",
+        placeItems: "center", // Align and justify items center
+        backgroundImage: `url(${bgImage})`, // Could be `url("../path/to/folder")
+        backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center center",
         backgroundAttachment: "fixed",

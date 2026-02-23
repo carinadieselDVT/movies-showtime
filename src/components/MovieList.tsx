@@ -9,27 +9,31 @@ export default function MovieList() {
         width: "100%",
         maxWidth: 720,
         p: 2,
-        bgcolor: "rgba(222, 200, 252, 0.7)",
+        bgcolor: "#7b1fa25a",
         borderRadius: 1,
         fontWeight: "bold",
 
-        // hide the native radios
+        // Hide radio buttons
         '& input[type="radio"]': { position: "absolute", left: -9999 },
+        // & - Replaces parent selector when nesting
+        // where an input with type of radio
 
         // base (non-active) button styling
         "& .filter-btn": {
+          // Where class is .filter-btn
           color: "text.secondary",
           borderColor: "divider",
           bgcolor: "transparent",
           textTransform: "none",
         },
         "& .filter-btn:hover": {
+          // where class .filter-btn is in hover state
           color: "text.primary",
           borderColor: "text.primary",
           bgcolor: "action.hover",
         },
 
-        // dim the non-active buttons when a selection is made
+        // :not - Specific
         "&:has(#r-all:checked) .filter-btn:not(.btn-all), &:has(#r-morning:checked) .filter-btn:not(.btn-morning), &:has(#r-afternoon:checked) .filter-btn:not(.btn-afternoon), &:has(#r-evening:checked) .filter-btn:not(.btn-evening)":
           {
             opacity: 0.85,
@@ -52,7 +56,7 @@ export default function MovieList() {
           },
       }}
     >
-      {/* Uncontrolled radios (no React state) */}
+      {/* Can have defaultChecked on any variant */}
       <input type="radio" name="period" id="r-all" defaultChecked />
       <input type="radio" name="period" id="r-morning" />
       <input type="radio" name="period" id="r-afternoon" />
@@ -82,7 +86,7 @@ export default function MovieList() {
           size="small"
           variant="outlined"
           className="filter-btn btn-afternoon"
-          component="label"
+          component="label" // more specificity,mostly useful for mui
           htmlFor="r-afternoon"
         >
           Afternoon
