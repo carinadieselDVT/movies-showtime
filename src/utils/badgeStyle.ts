@@ -7,7 +7,7 @@ export type BadgeStyle = {
   borderColor: string;
 };
 
-//TODO: Add to MUI theme
+//TODO: Use MUI theme styles instead of these
 export const timeslotBadgeStyles: Record<TimeslotToken, BadgeStyle> = {
   morning: {
     label: "Morning",

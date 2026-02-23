@@ -28,7 +28,6 @@ export default function MovieListItem({ movie }: { movie: Movie }) {
               border: `1px solid ${style.borderColor}`,
               fontWeight: 600,
             }}
-            variant="outlined"
           />
         </Box>
       }
