@@ -15,3 +15,6 @@ npm run dev
 ```
 
 ## Screenshots
+
+![Mobile]("./src/assets/Mobile.png)
+![Desktop]("./src/assets/Desktop.png")
