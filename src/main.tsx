@@ -7,6 +7,7 @@ import MorningShowtimes from "./pages/MorningShowtimes.tsx";
 import AfternoonShowtimes from "./pages/AfternoonShowtimes.tsx";
 import EveningShowtimes from "./pages/EveningShowtimes.tsx";
 import Layout from "./components/Layout.tsx";
+
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
@@ -21,7 +22,10 @@ createRoot(document.getElementById("root")!).render(
           <Route path="/" element={<Layout />}>
             <Route index element={<AllShowtimes />} />
             <Route path="morning-showtimes" element={<MorningShowtimes />} />
-            <Route path="afternoon-showtimes" element={<AfternoonShowtimes />} />
+            <Route
+              path="afternoon-showtimes"
+              element={<AfternoonShowtimes />}
+            />
             <Route path="evening-showtimes" element={<EveningShowtimes />} />
           </Route>
         </Routes>
