@@ -22,10 +22,8 @@ export default function MovieListItem({ movie }: { movie: Movie }) {
           <Chip
             size="small"
             label={style.label}
+            color={style.variant}
             sx={{
-              bgcolor: style.bgColor,
-              color: style.textColor,
-              border: `1px solid ${style.borderColor}`,
               fontWeight: 600,
             }}
           />

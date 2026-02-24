@@ -3,7 +3,6 @@ import bgImage from "./assets/background.jpg";
 import MovieList from "./components/MovieList";
 
 function App() {
-  // TODO: Convert units of measurement from MUI variants to pixels/rems
   return (
     <Box
       sx={{
