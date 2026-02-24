@@ -1,9 +1,10 @@
+// Generated with AI as per instructions
+
 export type Movie = {
   id: string;
   title: string;
   genre: string;
-  /** 24h integer hour, 0–23 (e.g., 14 for 2 PM) */
-  showtime: number;
+  showtime: number; // 24h hour, 0–23 (example : 14 for 2PM)
 };
 
 export const movies: Movie[] = [
