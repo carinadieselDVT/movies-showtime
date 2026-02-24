@@ -11,14 +11,22 @@ function Layout() {
         display: "grid",
         alignItems: "center",
         backgroundImage: `url(${bgImage})`,
-        backgroundSize: "contain",
+        backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center center",
         backgroundAttachment: "fixed",
       }}
     >
-      <CssBaseline />
-      <Container maxWidth="md">
+      <Container
+        sx={{
+          maxWidth: {
+            sm: "sm",
+            md: "md",
+            lg: "lg",
+          },
+        }}
+      >
+        <CssBaseline />
         <Navbar />
         <Outlet />
       </Container>

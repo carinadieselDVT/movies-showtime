@@ -1,13 +1,14 @@
 import { Box, List, Typography } from "@mui/material";
 import { movies } from "../data";
+import type { Movie } from "../data";
 import MovieListItem from "./MovieListItem";
 import { getTimeslot } from "../utils/time";
 
-interface MovieList {
+interface MovieListProps {
   timeslot: "all" | "morning" | "afternoon" | "evening";
 }
 
-export default function MovieList({ timeslot }: MovieList) {
+export default function MovieList({ timeslot }: MovieListProps) {
   const allMovies = movies;
   const morningSlot = movies.filter(
     (movie) => getTimeslot(movie.showtime) === "morning",
@@ -19,7 +20,7 @@ export default function MovieList({ timeslot }: MovieList) {
     (movie) => getTimeslot(movie.showtime) === "evening",
   );
 
-  const moviesInTimeslot =
+  const moviesInTimeslot: Movie[] =
     timeslot === "all"
       ? allMovies
       : timeslot === "morning"
@@ -28,7 +29,7 @@ export default function MovieList({ timeslot }: MovieList) {
           ? afternoonSlot
           : timeslot === "evening"
             ? eveningSlot
-            : "";
+            : [];
   return (
     <Box
       sx={{

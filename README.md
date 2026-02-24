@@ -14,6 +14,14 @@ npm install
 npm run dev
 ```
 
+## Things that can be improved on
+
+- Navbar can be done with all MUI components
+- Navlinks should stack on mobile
+- Navlink buttons could be their own components and have active states
+- Units used for styling could be uniform (Sticking to pixels for example)
+- Container sizing can be improved upon with some research
+
 ## Screenshots
 
 ![Mobile](./src/assets/Mobile.png)

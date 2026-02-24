@@ -6,7 +6,7 @@ export function getTimeslot(hour: number): TimeslotToken {
   return "evening";
 }
 
-// Format a 24h hour as "h:00 AM/PM" (e.g., 14 -> "2:00 PM")
+// Format a 24h hour as "h:00 AM/PM" (e.g., instead of 14 -> "2:00 PM")
 export function formatHour(hour: number): string {
   const h = ((hour + 11) % 12) + 1;
   const suffix = hour >= 12 ? "PM" : "AM";
