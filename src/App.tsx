@@ -6,11 +6,10 @@ function App() {
   return (
     <Box
       sx={{
-        // MUI's styling prop
         minHeight: "100vh",
         display: "grid",
-        placeItems: "center", // Align and justify items center
-        backgroundImage: `url(${bgImage})`, // Could be `url("../path/to/folder")
+        placeItems: "center",
+        backgroundImage: `url(${bgImage})`,
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center center",
@@ -18,9 +17,7 @@ function App() {
       }}
     >
       <CssBaseline />
-      <Container maxWidth="md">
-        <MovieList />
-      </Container>
+      <Container maxWidth="md">{/* <MovieList /> */}</Container>
     </Box>
   );
 }
