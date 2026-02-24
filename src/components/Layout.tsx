@@ -1,14 +1,28 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
+import { Box, Container, CssBaseline } from "@mui/material";
+import bgImage from "../assets/background.jpg";
 
 function Layout() {
   return (
-    <div
-      style={{ width: "100%", maxWidth: 920, margin: "0 auto", padding: 16 }}
+    <Box
+      sx={{
+        minHeight: "100vh",
+        display: "grid",
+        alignItems: "center",
+        backgroundImage: `url(${bgImage})`,
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center center",
+        backgroundAttachment: "fixed",
+      }}
     >
-      <Navbar />
-      <Outlet />
-    </div>
+      <CssBaseline />
+      <Container maxWidth="md">
+        <Navbar />
+        <Outlet />
+      </Container>
+    </Box>
   );
 }
 

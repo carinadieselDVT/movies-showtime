@@ -6,7 +6,9 @@ import { Link as RouterLink } from "react-router";
 export default function Navbar() {
   return (
     <header>
-      <nav>
+      <nav style={{ display: "flex", gap: "16px" }}>
+        {/* Optional TODO : Refactor to make these buttons their own components */}
+        {/* Selected buttons should have active state */}
         <Button variant="contained" component={RouterLink} to="/">
           All shows
         </Button>

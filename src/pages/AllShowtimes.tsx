@@ -4,7 +4,6 @@ import MovieList from "../components/MovieList";
 function AllShowtimes() {
   return (
     <div>
-      AllShowtimes
       <MovieList timeslot={"all"} />
     </div>
   );
