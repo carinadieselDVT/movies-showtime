@@ -1,6 +1,5 @@
 export type TimeslotToken = "morning" | "afternoon" | "evening";
 
-// Classify an hour (0–23) into a timeslot token
 export function getTimeslot(hour: number): TimeslotToken {
   if (hour >= 5 && hour < 12) return "morning";
   if (hour >= 12 && hour < 18) return "afternoon";

@@ -1,8 +1,12 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-// Using default MUI dark theme colours
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AllShowtimes from "./pages/AllShowtimes.tsx";
+import MorningShowtimes from "./pages/MorningShowtimes.tsx";
+import AfternoonShowtimes from "./pages/AfternoonShowtimes.tsx";
+import EveningShowtimes from "./pages/EveningShowtimes.tsx";
+import Layout from "./components/Layout.tsx";
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
@@ -12,7 +16,16 @@ const darkTheme = createTheme({
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider theme={darkTheme}>
-      <App />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<AllShowtimes />} />
+            <Route path="morning-showtimes" element={<MorningShowtimes />} />
+            <Route path="afternoon-showtimes" element={<AfternoonShowtimes />} />
+            <Route path="evening-showtimes" element={<EveningShowtimes />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   </StrictMode>,
 );
